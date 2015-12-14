@@ -13,7 +13,7 @@ The moons/planets you will encounter, in order (assuming you succeed at each sta
 - Titan: link *titan* and *CinReader*
 - Saturn: compile your *RocketShip* and link with *saturn*, *CinReader*
 - Jupiter: compile your *RocketShip* and link with *jupiter*, *CinReader*
-- Mars: compile your *RocketShip*, *SpecialRocketShip*, link with *mars, *CinReader*
+- Mars: compile your *RocketShip*, *SpecialRocketShip*, link with *mars*, *CinReader*
 - Earth: compile your *Activator*, link with *earth*, *CinReader*
 - Mega Weapon: link *megaweapon*, *CinReader*
 
