@@ -1,0 +1,91 @@
+unsigned int unittest ()
+{
+	unsigned int testsPassed = 0;
+	Activator a;
+	
+	cout << "\nTEST :: ACTIVATOR\n\n";
+
+	try {
+		btassert<bool>(a.getPrime(12345) == 132241);
+		cout << "Passed TEST 1: getPrime \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 1: getPrime #\n";
+	}
+	
+	try {
+		btassert<bool>(a.getPrime(29) == 109);
+		cout << "Passed TEST 2: getPrime \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 2: getPrime #\n";
+	}
+	
+	try {
+		btassert<bool>(a.getPrime(503) == 3593);
+		cout << "Passed TEST 3: getPrime \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 3: getPrime #\n";
+	}
+	
+	try {
+		btassert<bool>(a.getPrime(5333) == 52163);
+		cout << "Passed TEST 4: getPrime \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 4: getPrime #\n";
+	}
+	
+	try {
+		btassert<bool>(a.getPrime(8719) == 90023);
+		cout << "Passed TEST 5: getPrime \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 5: getPrime #\n";
+	}
+	
+	try {
+		btassert<bool>(a.sumTheDigits(0) == 0);
+		cout << "Passed TEST 6: sumTheDigits \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 6: sumTheDigits #\n";
+	}
+	
+	try {
+		btassert<bool>(a.sumTheDigits(19) == 1);
+		cout << "Passed TEST 7: sumTheDigits \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 7: sumTheDigits #\n";
+	}
+	
+	try {
+		btassert<bool>(a.sumTheDigits(88) == 7);
+		cout << "Passed TEST 8: sumTheDigits \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 8: sumTheDigits #\n";
+	}
+	
+	try {
+		btassert<bool>(a.sumTheDigits(888) == 6);
+		cout << "Passed TEST 9: sumTheDigits \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 9: sumTheDigits #\n";
+	}
+	
+	try {
+		btassert<bool>(a.sumTheDigits(8888) == 5);
+		cout << "Passed TEST 10: sumTheDigits \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 10: sumTheDigits #\n";
+	}
+	
+	cout << "\nTEST ACTIVATOR :: COMPLETE\n\n";
+	
+	return testsPassed;
+}

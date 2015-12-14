@@ -1,0 +1,46 @@
+unsigned int unittest ()
+{
+	unsigned int testsPassed = 0;
+	SpecialRocketShip ship;
+	
+	cout << "\nTEST :: SPECIAL ROCKET SHIP\n\n";
+
+	try {
+		btassert<bool>(ship.getName() == "RS Cloaky" && ship.getFuel() == 1000 && ship.getCloaked() == false);
+		cout << "Passed TEST 1: constructor \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 1: constructor #\n";
+	}
+	
+	ship.setName("RS NotCloakied");
+	try {
+		btassert<bool>(ship.getName() == "RS NotCloakied");
+		cout << "Passed TEST 2: setName/getName \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 2: setName/getName #\n";
+	}
+	
+	ship.setFuel(9999);
+	try {
+		btassert<bool>(ship.getFuel() == 9999);
+		cout << "Passed TEST 3: setFuel/getFuel \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 3: setFuel/getFuel #\n";
+	}
+	
+	ship.setCloaked(true);
+	try {
+		btassert<bool>(ship.getCloaked() == true);
+		cout << "Passed TEST 4: setCloaked/getCloaked \n";
+		testsPassed++;
+	} catch (bool b) {
+		cout << "# FAILED TEST 4: setCloaked/getCloaked #\n";
+	}
+	
+	cout << "\nTEST SPECIAL ROCKET SHIP :: COMPLETE\n\n";
+	
+	return testsPassed;
+}
